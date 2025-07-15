@@ -1,0 +1,4 @@
+﻿l_korean:
+ pm_basic_port_isolationism:0 "$pm_basic_port$"
+ pm_industrial_port_isolationism:0 "$pm_industrial_port$"
+ pm_modern_port_isolationism:0 "$pm_modern_port$"
