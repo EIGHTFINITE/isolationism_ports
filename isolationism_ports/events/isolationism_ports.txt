@@ -1,0 +1,48 @@
+﻿namespace = isolationism_ports
+
+isolationism_ports.1 = {
+	type = country_event
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_variable = isolationism_ports_active }
+			}
+			set_variable = isolationism_ports_active
+		}
+		if = {
+			limit = {
+				has_law = law_type:law_isolationism
+				any_scope_state = {
+					has_building = building_trade_center
+				}
+			}
+			every_scope_state = {
+				limit = {
+					has_building = building_trade_center
+				}
+				remove_building = building_trade_center
+			}
+		}
+		else_if = {
+			limit = {
+				has_law = law_type:law_canton_system
+				any_scope_state = {
+					NOT = { state_region = s:STATE_GUANGDONG }
+					has_building = building_trade_center
+				}
+			}
+			every_scope_state = {
+				limit = {
+					NOT = { state_region = s:STATE_GUANGDONG }
+					has_building = building_trade_center
+				}
+				remove_building = building_trade_center
+			}
+		}
+		trigger_event = {
+			id = isolationism_ports.1
+			days = 1
+		}
+	}
+}
