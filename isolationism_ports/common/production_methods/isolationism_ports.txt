@@ -221,10 +221,43 @@ pm_modern_port_isolationism = {
 pm_skyscraper_trade_nexus = {
 	texture = "gfx/interface/icons/production_method_icons/skyscraper_trade_nexus.dds"
 
-	country_modifiers = {
+	disallowing_laws = {
+		law_isolationism
+	}
+
+	state_modifiers = {
 		workforce_scaled = {
 			state_trade_capacity_mult = 0.25
 			state_trade_advantage_mult = 0.25
+		}
+	}
+
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_paper_add = 25
+		}
+
+		level_scaled = {
+			building_employment_laborers_add = 200
+			building_employment_clerks_add = 500
+			building_employment_bureaucrats_add = 300
+		}
+	}
+
+	replacement_if_valid = pm_skyscraper_trade_nexus_isolationism
+}
+
+pm_skyscraper_trade_nexus_isolationism = {
+	texture = "gfx/interface/icons/production_method_icons/skyscraper_trade_nexus.dds"
+	is_hidden_when_unavailable = yes
+
+	unlocking_laws = {
+		law_isolationism
+	}
+
+	state_modifiers = {
+		workforce_scaled = {
+			building_port_throughput_add = 0.25
 		}
 	}
 
