@@ -5,3 +5,5 @@
  pm_industrial_port_isolationism:0 "$pm_industrial_port$"
  pm_modern_port_isolationism:0 "$pm_modern_port$"
  pm_skyscraper_trade_nexus_isolationism:0 "$pm_skyscraper_trade_nexus$"
+ goods_output_transportation_mult:0 "Building @transportation! Transportation output"
+ goods_output_transportation_mult_desc:0 "A bonus or penalty to the amount of @transportation! Transportation produced by buildings"
