@@ -6,15 +6,12 @@
 
 	levels_per_mesh = 1
 
-	enable_air_connection = yes
-
 	expandable = no
 
-	downsizeable = no
+	downsizeable = yes
 
 	production_method_groups = {
 		pmg_base_building_skyscraper
-		pmg_airship_mooring_post
 	}
 
 	icon = "gfx/interface/icons/building_icons/skyscraper.dds"
@@ -24,7 +21,16 @@
 	can_build_government = {
 		custom_tooltip = {
 			text = skyscraper_can_construct_tt
-			has_modifier = skyscraper_site
+			OR = {
+				has_modifier = skyscraper_site
+				AND = {
+					game_date > 1935.12.30
+					owner = {
+						has_technology_researched = steel_frame_buildings
+						has_technology_researched = reinforced_concrete
+					}
+				}
+			}
 		}
 	}
 	can_build_private = {
