@@ -3,9 +3,7 @@
 	cost = 30
 	category = staple
 	local = yes
-	
-	prestige_factor = 3
-	
+
 	consumption_tax_cost = 200
 }
 
@@ -15,8 +13,6 @@ transportation = {
 	category = staple
 	local = yes
 
-	prestige_factor = 4
-	
 	consumption_tax_cost = 200
 }
 
@@ -25,8 +21,6 @@ electricity = {
 	cost = 30
 	category = staple
 	local = yes
-	
-	prestige_factor = 5
-	
+
 	consumption_tax_cost = 200
 }
